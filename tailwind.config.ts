@@ -1,90 +1,90 @@
-import type { Config } from 'tailwindcss';
+import type { Config } from "tailwindcss";
 
 const config: Config = {
-  darkMode: ['class'],
+  darkMode: ["class"],
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)',
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
       },
       colors: {
-        background: 'hsl(var(--background))',
-        foreground: 'hsl(var(--foreground))',
+        background: "#F3F4F6", // Light grey for backgrounds
+        foreground: "#1E293B", // Dark grey for primary text
         card: {
-          DEFAULT: 'hsl(var(--card))',
-          foreground: 'hsl(var(--card-foreground))',
+          DEFAULT: "#E5E7EB", // Light neutral for cards
+          foreground: "#374151", // Dark neutral for text on cards
         },
         popover: {
-          DEFAULT: 'hsl(var(--popover))',
-          foreground: 'hsl(var(--popover-foreground))',
+          DEFAULT: "#F9FAFB", // Slightly brighter neutral for popups
+          foreground: "#111827", // Text color for popovers
         },
         primary: {
-          DEFAULT: 'hsl(var(--primary))',
-          foreground: 'hsl(var(--primary-foreground))',
+          DEFAULT: "#1E40AF", // Navy for primary elements
+          foreground: "#E0F2FE", // Light color for text on primary
         },
         secondary: {
-          DEFAULT: 'hsl(var(--secondary))',
-          foreground: 'hsl(var(--secondary-foreground))',
+          DEFAULT: "#64748B", // Muted blue-grey for secondary elements
+          foreground: "#F8FAFC", // Light text for secondary
         },
         muted: {
-          DEFAULT: 'hsl(var(--muted))',
-          foreground: 'hsl(var(--muted-foreground))',
+          DEFAULT: "#D1D5DB", // Soft grey for muted elements
+          foreground: "#4B5563", // Subtle text color
         },
         accent: {
-          DEFAULT: 'hsl(var(--accent))',
-          foreground: 'hsl(var(--accent-foreground))',
+          DEFAULT: "#F59E0B", // Gold for highlights and CTAs
+          foreground: "#92400E", // Dark text on accents
         },
         destructive: {
-          DEFAULT: 'hsl(var(--destructive))',
-          foreground: 'hsl(var(--destructive-foreground))',
+          DEFAULT: "#DC2626", // Red for errors or warnings
+          foreground: "#7F1D1D", // Dark text on red backgrounds
         },
-        border: 'hsl(var(--border))',
-        input: 'hsl(var(--input))',
-        ring: 'hsl(var(--ring))',
+        border: "#E5E7EB", // Light grey for borders
+        input: "#F3F4F6", // Input background color
+        ring: "#3B82F6", // Ring color for focus states
         chart: {
-          '1': 'hsl(var(--chart-1))',
-          '2': 'hsl(var(--chart-2))',
-          '3': 'hsl(var(--chart-3))',
-          '4': 'hsl(var(--chart-4))',
-          '5': 'hsl(var(--chart-5))',
+          "1": "#3B82F6", // Primary chart color
+          "2": "#60A5FA", // Secondary chart color
+          "3": "#93C5FD", // Tertiary chart color
+          "4": "#BFDBFE", // Additional chart color
+          "5": "#DBEAFE", // Additional chart color
         },
       },
       keyframes: {
-        'accordion-down': {
+        "accordion-down": {
           from: {
-            height: '0',
+            height: "0",
           },
           to: {
-            height: 'var(--radix-accordion-content-height)',
+            height: "var(--radix-accordion-content-height)",
           },
         },
-        'accordion-up': {
+        "accordion-up": {
           from: {
-            height: 'var(--radix-accordion-content-height)',
+            height: "var(--radix-accordion-content-height)",
           },
           to: {
-            height: '0',
+            height: "0",
           },
         },
       },
       animation: {
-        'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out',
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [require("tailwindcss-animate")],
 };
 export default config;
